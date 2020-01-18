@@ -1,0 +1,177 @@
+{
+  "connections": [
+    {
+      "source": [
+        "arr"
+      ],
+      "target": [
+        "gen_mrc",
+        "arr"
+      ],
+      "type": "connection"
+    }
+  ],
+  "lib": {},
+  "nodes": [
+    {
+      "celltype": "structured",
+      "checksum": {
+        "auth": "63f5811258dc1ec13b6459d059edf0f4de53530b1e27e0ac0c291cbee90331e7",
+        "buffer": "63f5811258dc1ec13b6459d059edf0f4de53530b1e27e0ac0c291cbee90331e7",
+        "value": "63f5811258dc1ec13b6459d059edf0f4de53530b1e27e0ac0c291cbee90331e7"
+      },
+      "datatype": "mixed",
+      "hash_pattern": null,
+      "path": [
+        "arr"
+      ],
+      "type": "cell"
+    },
+    {
+      "INPUT": "inp",
+      "RESULT": "result",
+      "SCHEMA": null,
+      "checksum": {
+        "code": "72ec13d5f447c91dee4259c98e448589a3917a90c1daa5a5ac11be66f52ecb4d",
+        "input": "cbe5dc5f4e65b7ffdd64b2f223990ca4824e4730a5302581dfa3acb6551932f2",
+        "input_auth": "cbe5dc5f4e65b7ffdd64b2f223990ca4824e4730a5302581dfa3acb6551932f2",
+        "input_buffer": "cbe5dc5f4e65b7ffdd64b2f223990ca4824e4730a5302581dfa3acb6551932f2",
+        "result": "ed2b555cdbacb1672ae4b2a0b7ab2270d9c40fde2693ff47ad46e3a559bc0615"
+      },
+      "compiled": false,
+      "debug": false,
+      "language": "python",
+      "mount": {
+        "code": {
+          "authority": "cell",
+          "mode": "rw",
+          "path": "gen-mrc.py",
+          "persistent": true
+        }
+      },
+      "path": [
+        "gen_mrc"
+      ],
+      "pins": {
+        "arr": {
+          "celltype": "mixed"
+        }
+      },
+      "type": "transformer",
+      "with_result": true
+    },
+    {
+      "celltype": "text",
+      "checksum": {
+        "value": "6475e1f97dc2fec857ca97ca07e63bd28ea8094014b4c0605875d25e116ceb69"
+      },
+      "datatype": "mixed",
+      "path": [
+        "pdbA"
+      ],
+      "share": {
+        "path": "pdbA.pdb",
+        "readonly": true
+      },
+      "type": "cell"
+    },
+    {
+      "celltype": "text",
+      "checksum": {
+        "value": "6224a006b3203295a863559be021510e815fd89bace0f3a324395fb3ca6812ce"
+      },
+      "datatype": "mixed",
+      "path": [
+        "pdbB"
+      ],
+      "type": "cell"
+    },
+    {
+      "path": [
+        "web"
+      ],
+      "type": "context"
+    },
+    {
+      "celltype": "text",
+      "checksum": {
+        "value": "baa77c167ff4ef95a513889da955a0cf19f00f1cc2acff4af0aa139f28397357"
+      },
+      "datatype": "mixed",
+      "file_extension": "html",
+      "mimetype": "text/html",
+      "mount": {
+        "authority": "file",
+        "mode": "rw",
+        "path": "index.html",
+        "persistent": true
+      },
+      "path": [
+        "web",
+        "html"
+      ],
+      "share": {
+        "path": "index.html",
+        "readonly": true
+      },
+      "type": "cell"
+    },
+    {
+      "celltype": "binary",
+      "checksum": {
+        "value": "75e916eb11034c62cfe4a8f0dd9ca583d7c9e497c108e7ca5623c0e10d14d741"
+      },
+      "datatype": "mixed",
+      "mimetype": "application/octet-stream",
+      "path": [
+        "web",
+        "mrc"
+      ],
+      "share": {
+        "path": "grid.mrc",
+        "readonly": true
+      },
+      "type": "cell"
+    },
+    {
+      "celltype": "text",
+      "checksum": {
+        "value": "dc880d3f766a9abbf2bb452686e0270899f5362c09ae5c2c42f7fa348812ecb2"
+      },
+      "datatype": "mixed",
+      "path": [
+        "web",
+        "seamless_client"
+      ],
+      "share": {
+        "path": "seamless-client.js",
+        "readonly": true
+      },
+      "type": "cell"
+    },
+    {
+      "celltype": "text",
+      "checksum": {
+        "value": "7d016010e6998b93aaac51df7c723b09564e163467293cd8fd335b488dd2050a"
+      },
+      "file_extension": "js",
+      "mimetype": "application/javascript",
+      "mount": {
+        "authority": "cell",
+        "mode": "rw",
+        "path": "vismol.js",
+        "persistent": true
+      },
+      "path": [
+        "web",
+        "vismol"
+      ],
+      "share": {
+        "path": "vismol.js",
+        "readonly": true
+      },
+      "type": "cell"
+    }
+  ],
+  "params": {}
+}
