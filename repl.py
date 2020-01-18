@@ -10,6 +10,7 @@ def save():
 
 ctx = load_graph("graph.seamless", mounts=True, shares=True)
 ctx.add_zip("graph.zip")
+ctx.translate(force=True) # kludge
 
 print("Open http://localhost:5813/ctx/index.html in the browser")
 
