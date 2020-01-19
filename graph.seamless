@@ -5,7 +5,46 @@
         "arr"
       ],
       "target": [
-        "gen_mrc",
+        "tf_mrc",
+        "arr"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "voxelsize"
+      ],
+      "target": [
+        "tf_mrc",
+        "voxelsize"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "tf_mrc"
+      ],
+      "target": [
+        "web",
+        "mrc"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "gen_mrc"
+      ],
+      "target": [
+        "tf_mrc",
+        "code"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "gen_arr"
+      ],
+      "target": [
         "arr"
       ],
       "type": "connection"
@@ -16,9 +55,8 @@
     {
       "celltype": "structured",
       "checksum": {
-        "auth": "63f5811258dc1ec13b6459d059edf0f4de53530b1e27e0ac0c291cbee90331e7",
-        "buffer": "63f5811258dc1ec13b6459d059edf0f4de53530b1e27e0ac0c291cbee90331e7",
-        "value": "63f5811258dc1ec13b6459d059edf0f4de53530b1e27e0ac0c291cbee90331e7"
+        "buffer": "747bfe5b1783e368f4ef171ade76e7d26d240b0594aaa8de49108eb3992421cf",
+        "value": "747bfe5b1783e368f4ef171ade76e7d26d240b0594aaa8de49108eb3992421cf"
       },
       "datatype": "mixed",
       "hash_pattern": null,
@@ -32,11 +70,8 @@
       "RESULT": "result",
       "SCHEMA": null,
       "checksum": {
-        "code": "72ec13d5f447c91dee4259c98e448589a3917a90c1daa5a5ac11be66f52ecb4d",
-        "input": "cbe5dc5f4e65b7ffdd64b2f223990ca4824e4730a5302581dfa3acb6551932f2",
-        "input_auth": "cbe5dc5f4e65b7ffdd64b2f223990ca4824e4730a5302581dfa3acb6551932f2",
-        "input_buffer": "cbe5dc5f4e65b7ffdd64b2f223990ca4824e4730a5302581dfa3acb6551932f2",
-        "result": "ed2b555cdbacb1672ae4b2a0b7ab2270d9c40fde2693ff47ad46e3a559bc0615"
+        "code": "bfeac900cc39ffdbcfc4c4b24969d73c3e9233c2abd79d26b20856681212e55d",
+        "result": "747bfe5b1783e368f4ef171ade76e7d26d240b0594aaa8de49108eb3992421cf"
       },
       "compiled": false,
       "debug": false,
@@ -45,20 +80,35 @@
         "code": {
           "authority": "cell",
           "mode": "rw",
-          "path": "gen-mrc.py",
+          "path": "gen-arr.py",
           "persistent": true
         }
       },
       "path": [
-        "gen_mrc"
+        "gen_arr"
       ],
-      "pins": {
-        "arr": {
-          "celltype": "mixed"
-        }
-      },
+      "pins": {},
       "type": "transformer",
       "with_result": true
+    },
+    {
+      "celltype": "code",
+      "checksum": {
+        "value": "527c045b39c15755e15286a1960e6b8e60866e6ad84ea3b0edcfed570ce66133"
+      },
+      "datatype": "mixed",
+      "file_extension": "py",
+      "language": "python",
+      "mount": {
+        "authority": "cell",
+        "mode": "rw",
+        "path": "gen-mrc.py",
+        "persistent": true
+      },
+      "path": [
+        "gen_mrc"
+      ],
+      "type": "cell"
     },
     {
       "celltype": "text",
@@ -87,6 +137,47 @@
       "type": "cell"
     },
     {
+      "INPUT": "inp",
+      "RESULT": "result",
+      "SCHEMA": null,
+      "checksum": {
+        "code": "527c045b39c15755e15286a1960e6b8e60866e6ad84ea3b0edcfed570ce66133",
+        "input": "9576804b17a6ddb9894bed1659a721d42daa766f71a3265472a7c46ce889d807",
+        "input_buffer": "9576804b17a6ddb9894bed1659a721d42daa766f71a3265472a7c46ce889d807",
+        "result": "3ba6503d5e21890ae216a6b8b61583f33d2a88a89769c3c73dbc0598d260b309"
+      },
+      "compiled": false,
+      "debug": false,
+      "language": "python",
+      "path": [
+        "tf_mrc"
+      ],
+      "pins": {
+        "arr": {
+          "celltype": "mixed"
+        },
+        "voxelsize": {
+          "celltype": "mixed"
+        }
+      },
+      "type": "transformer",
+      "with_result": true
+    },
+    {
+      "celltype": "structured",
+      "checksum": {
+        "auth": "fbeecb3723faac6d3cc36ad442210c8911ff4b3757547862455018a4211b291b",
+        "buffer": "fbeecb3723faac6d3cc36ad442210c8911ff4b3757547862455018a4211b291b",
+        "value": "fbeecb3723faac6d3cc36ad442210c8911ff4b3757547862455018a4211b291b"
+      },
+      "datatype": "mixed",
+      "hash_pattern": null,
+      "path": [
+        "voxelsize"
+      ],
+      "type": "cell"
+    },
+    {
       "path": [
         "web"
       ],
@@ -95,7 +186,7 @@
     {
       "celltype": "text",
       "checksum": {
-        "value": "baa77c167ff4ef95a513889da955a0cf19f00f1cc2acff4af0aa139f28397357"
+        "value": "cfd1f2b48a2448e06e2b602834f824a12222d50bcba62d3df30a292ae857558a"
       },
       "datatype": "mixed",
       "file_extension": "html",
@@ -117,18 +208,66 @@
       "type": "cell"
     },
     {
+      "celltype": "float",
+      "checksum": {
+        "value": "a162c88bc74487aa49b7d96aa17dc97d9deea073bd7a1d31f56a72ac6d9a8b72"
+      },
+      "datatype": "mixed",
+      "file_extension": "text",
+      "mimetype": "text/plain",
+      "path": [
+        "web",
+        "isolevel"
+      ],
+      "share": {
+        "path": "isolevel",
+        "readonly": false
+      },
+      "type": "cell"
+    },
+    {
       "celltype": "binary",
       "checksum": {
-        "value": "75e916eb11034c62cfe4a8f0dd9ca583d7c9e497c108e7ca5623c0e10d14d741"
+        "value": "24023999a069baf3fdd74fc90b01cde1368ac1b98d8d0c3ab203f95f2dbba715"
       },
       "datatype": "mixed",
       "mimetype": "application/octet-stream",
+      "mount": {
+        "authority": "cell",
+        "mode": "w",
+        "path": "test.mrc",
+        "persistent": true
+      },
       "path": [
         "web",
         "mrc"
       ],
       "share": {
         "path": "grid.mrc",
+        "readonly": true
+      },
+      "type": "cell"
+    },
+    {
+      "celltype": "text",
+      "checksum": {
+        "value": "e6db188d8d8acc001653d928e37bbd005bc7d34bba2b5d048dcb5022a6e34bc4"
+      },
+      "datatype": "mixed",
+      "file_extension": "js",
+      "mimetype": "application/javascript",
+      "mount": {
+        "authority": "cell",
+        "mode": "rw",
+        "path": "representation.js",
+        "persistent": true
+      },
+      "path": [
+        "web",
+        "representation"
+      ],
+      "share": {
+        "path": "representation.js",
         "readonly": true
       },
       "type": "cell"
@@ -152,7 +291,7 @@
     {
       "celltype": "text",
       "checksum": {
-        "value": "7d016010e6998b93aaac51df7c723b09564e163467293cd8fd335b488dd2050a"
+        "value": "78319eafa7c8a57c9e29392df87480802191faaffdc338633bd0824b59e5ec4a"
       },
       "file_extension": "js",
       "mimetype": "application/javascript",

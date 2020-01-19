@@ -33,7 +33,9 @@ class MemoryMrcFile(MrcFile):
 arr = arr.unsilk.astype(np.float32)
 mrc_buffer = MyBytesIO()
 mrc_file = MemoryMrcFile(mrc_buffer, mode="w+")
-mrc_file.set_data(arr)
+data = arr
+mrc_file.set_data(data)
+mrc_file.voxel_size = voxelsize
+mrc_file.header.ispg = 0
 del mrc_file
-#result = mrc_buffer.myvalue
-result = ''
+result = mrc_buffer.myvalue

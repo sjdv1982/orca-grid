@@ -1,30 +1,35 @@
-// Setup to load data from rawgit
-NGL.DatasourceRegistry.add(
-    "data", new NGL.StaticDatasource( "//cdn.rawgit.com/arose/ngl/v2.0.0-dev.32/data/" )
-);
 
 // Create NGL Stage object
-var stage = new NGL.Stage( "viewport" );
+var stage = new NGL.Stage("viewport");
 
 // Handle window resizing
-window.addEventListener( "resize", function( event ){
-    stage.handleResize();
-}, false );
+window.addEventListener("resize", function (event) {
+  stage.handleResize();
+}, false);
 
 
-// Code for example: color/volume
+grid = null
+pdb = null
 
-Promise.all([
-  stage.loadFile("./grid.mrc"),
-  stage.loadFile("./pdbA.pdb", { voxelSize: 3.54 })
-]).then(function (l) {
-  var grid = l[ 0 ]
-  var pdb = l[ 1 ]
-  grid.addRepresentation("dot", {
+ctx = connect_seamless("ws://localhost:5138", "http://localhost:5813", "ctx");
+ctx.self.onsharelist = function(sharelist) {
+  ctx.isolevel.onchange = function() {
+    loadNGL()
+  }
+}
+
+function loadNGL() {
+  Promise.all([
+    stage.removeAllComponents(),
+    stage.loadFile("./grid.mrc"),  
+    stage.loadFile("./pdbA.pdb")
+  ]).then(function (l) {
+    grid = l[0]
+    c = grid.getCenter()
+    grid.setTransform( grid.transform.makeTranslation(-c.x, -c.y, -c.z) )
+    pdb = l[1]
+    eval(ctx["representation.js"])
+    stage.autoView()
   })
-  grid.addRepresentation("surface", {
-    contour: true
-  })
-  pdb.addRepresentation("spacefill", {})
-  stage.autoView()
-})
+}
+loadNGL()
