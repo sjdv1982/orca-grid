@@ -13,14 +13,17 @@ pdb = null
 
 ctx = connect_seamless("ws://localhost:5138", "http://localhost:5813", "ctx");
 ctx.self.onsharelist = function(sharelist) {
-  ctx.isolevel.onchange = function() {
+  ctx["vismol.js"].onchange = function() {
+    if (grid !== null) window.location.reload(true)
+  }
+  ctx.self.onchange = function() {
     loadNGL()
   }
 }
 
 function loadNGL() {
-  Promise.all([
-    stage.removeAllComponents(),
+  stage.removeAllComponents()
+  Promise.all([    
     stage.loadFile("./grid.mrc"),  
     stage.loadFile("./pdbA.pdb")
   ]).then(function (l) {
@@ -28,7 +31,7 @@ function loadNGL() {
     c = grid.getCenter()
     grid.setTransform( grid.transform.makeTranslation(-c.x, -c.y, -c.z) )
     pdb = l[1]
-    eval(ctx["representation.js"])
+    eval(ctx["representation"].value)
     stage.autoView()
   })
 }
