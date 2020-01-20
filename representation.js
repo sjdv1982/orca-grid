@@ -11,5 +11,5 @@ grid.addRepresentation("dot", {
     isolevel: isolevel,
   })
   pdb.addRepresentation("spacefill", {
-    opacity: 0.2
+    opacity: 0.3
   })
