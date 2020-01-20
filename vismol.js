@@ -23,8 +23,9 @@ ctx.self.onsharelist = function(sharelist) {
 
 function loadNGL() {
   stage.removeAllComponents()
+  voxelsize = parseFloat(ctx.voxelsize.value)
   Promise.all([    
-    stage.loadFile("./grid.mrc"),  
+    stage.loadFile("./grid.mrc",{voxelSize: 1}),  
     stage.loadFile("./pdbA.pdb")
   ]).then(function (l) {
     grid = l[0]

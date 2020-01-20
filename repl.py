@@ -17,7 +17,7 @@ print("Open http://localhost:5813/ctx/index.html in the browser")
 
 def vis():
     global ctx2
-    ctx2 = load_graph("state-visualization-graph.seamless", shares=True)
+    ctx2 = load_graph("state-visualization-graph.seamless", shares=True, mounts=False)
     ctx2.add_zip("state-visualization-graph.zip")
 
     state_callbacks = {}

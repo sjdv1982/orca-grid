@@ -42,6 +42,55 @@
     },
     {
       "source": [
+        "load_pdb"
+      ],
+      "target": [
+        "tf_load_pdbA",
+        "code"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "pdbA"
+      ],
+      "target": [
+        "tf_load_pdbA",
+        "pdb"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "tf_load_pdbA"
+      ],
+      "target": [
+        "arr_pdbA"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "arr_pdbA"
+      ],
+      "target": [
+        "gen_arr",
+        "coor"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
+        "voxelsize"
+      ],
+      "target": [
+        "gen_arr",
+        "voxelsize"
+      ],
+      "type": "connection"
+    },
+    {
+      "source": [
         "gen_arr"
       ],
       "target": [
@@ -55,8 +104,8 @@
     {
       "celltype": "structured",
       "checksum": {
-        "buffer": "031ecedb6b74761d1a2692a59bb7b1c8e119de9d2e07694e8758dc5b137b2425",
-        "value": "031ecedb6b74761d1a2692a59bb7b1c8e119de9d2e07694e8758dc5b137b2425"
+        "buffer": "48ed264c422cba58009a6952b9478b7a606cafd45f165be7019d3b3459b8747a",
+        "value": "48ed264c422cba58009a6952b9478b7a606cafd45f165be7019d3b3459b8747a"
       },
       "datatype": "mixed",
       "hash_pattern": null,
@@ -66,12 +115,27 @@
       "type": "cell"
     },
     {
+      "celltype": "structured",
+      "checksum": {
+        "buffer": "86fe53887a974e99cf66cf89b7db51b9085c2e110394fca059f83d2453a284d1",
+        "value": "86fe53887a974e99cf66cf89b7db51b9085c2e110394fca059f83d2453a284d1"
+      },
+      "datatype": "mixed",
+      "hash_pattern": null,
+      "path": [
+        "arr_pdbA"
+      ],
+      "type": "cell"
+    },
+    {
       "INPUT": "inp",
       "RESULT": "result",
       "SCHEMA": null,
       "checksum": {
-        "code": "3cfa975c94589bc2e54fd83083d681779e5be03a23a6eb06a8b4e1369004a21d",
-        "result": "031ecedb6b74761d1a2692a59bb7b1c8e119de9d2e07694e8758dc5b137b2425"
+        "code": "c8b12992dc560b2a97115eee385bef585906f73e4f9be725090b4dd0c07287bb",
+        "input": "f69fbb5134a44d569136cb9036f83af850bcb364bf062fff2b5f5728f11fb3a0",
+        "input_buffer": "f69fbb5134a44d569136cb9036f83af850bcb364bf062fff2b5f5728f11fb3a0",
+        "result": "48ed264c422cba58009a6952b9478b7a606cafd45f165be7019d3b3459b8747a"
       },
       "compiled": false,
       "debug": false,
@@ -87,14 +151,21 @@
       "path": [
         "gen_arr"
       ],
-      "pins": {},
+      "pins": {
+        "coor": {
+          "celltype": "mixed"
+        },
+        "voxelsize": {
+          "celltype": "mixed"
+        }
+      },
       "type": "transformer",
       "with_result": true
     },
     {
       "celltype": "code",
       "checksum": {
-        "value": "527c045b39c15755e15286a1960e6b8e60866e6ad84ea3b0edcfed570ce66133"
+        "value": "804bff693dc0aebbe35f3ab8b7eb0cb10a7fb0b7b1c572fea959d1cea7d34199"
       },
       "datatype": "mixed",
       "file_extension": "py",
@@ -107,6 +178,24 @@
       },
       "path": [
         "gen_mrc"
+      ],
+      "type": "cell"
+    },
+    {
+      "celltype": "code",
+      "checksum": {
+        "value": "fbd6d0426324b8a0c3a490386fa5c661b71ed3350e5ea569824aae2bc28000f9"
+      },
+      "datatype": "mixed",
+      "language": "python",
+      "mount": {
+        "authority": "file",
+        "mode": "rw",
+        "path": "load_pdb.py",
+        "persistent": true
+      },
+      "path": [
+        "load_pdb"
       ],
       "type": "cell"
     },
@@ -141,10 +230,34 @@
       "RESULT": "result",
       "SCHEMA": null,
       "checksum": {
-        "code": "527c045b39c15755e15286a1960e6b8e60866e6ad84ea3b0edcfed570ce66133",
-        "input": "aeef8fdf5941bc55c7bfb5aa03a25076119dd767f80db8503bc686f4fe11563b",
-        "input_buffer": "aeef8fdf5941bc55c7bfb5aa03a25076119dd767f80db8503bc686f4fe11563b",
-        "result": "ba1de99e97ffaec965f5ea5d6c76d8a2de4855b114e2f47c313b4a06da054f98"
+        "code": "fbd6d0426324b8a0c3a490386fa5c661b71ed3350e5ea569824aae2bc28000f9",
+        "input": "abcaae825d41ea1b2afbb5ec03043f7c822bd4fdc8270e956e1ac55a9d01f174",
+        "input_buffer": "abcaae825d41ea1b2afbb5ec03043f7c822bd4fdc8270e956e1ac55a9d01f174",
+        "result": "86fe53887a974e99cf66cf89b7db51b9085c2e110394fca059f83d2453a284d1"
+      },
+      "compiled": false,
+      "debug": false,
+      "language": "python",
+      "path": [
+        "tf_load_pdbA"
+      ],
+      "pins": {
+        "pdb": {
+          "celltype": "mixed"
+        }
+      },
+      "type": "transformer",
+      "with_result": true
+    },
+    {
+      "INPUT": "inp",
+      "RESULT": "result",
+      "SCHEMA": null,
+      "checksum": {
+        "code": "804bff693dc0aebbe35f3ab8b7eb0cb10a7fb0b7b1c572fea959d1cea7d34199",
+        "input": "5011f09d9f4fa9846fe7e6e6c100abf9373c721059cb7da0aa111b1dd42f2bbf",
+        "input_buffer": "5011f09d9f4fa9846fe7e6e6c100abf9373c721059cb7da0aa111b1dd42f2bbf",
+        "result": "3a6d9652ed6a6d8908b08901834741d76da575fc1860232d4cf8459d1ba913f3"
       },
       "compiled": false,
       "debug": false,
@@ -164,17 +277,20 @@
       "with_result": true
     },
     {
-      "celltype": "structured",
+      "celltype": "float",
       "checksum": {
-        "auth": "fbeecb3723faac6d3cc36ad442210c8911ff4b3757547862455018a4211b291b",
-        "buffer": "fbeecb3723faac6d3cc36ad442210c8911ff4b3757547862455018a4211b291b",
-        "value": "fbeecb3723faac6d3cc36ad442210c8911ff4b3757547862455018a4211b291b"
+        "value": "e9a4c0cfb3795c713f1757baa53cc8cd6d07748dbb7afc4b8aca7e47ada15eed"
       },
       "datatype": "mixed",
-      "hash_pattern": null,
+      "file_extension": "text",
+      "mimetype": "text/plain",
       "path": [
         "voxelsize"
       ],
+      "share": {
+        "path": null,
+        "readonly": true
+      },
       "type": "cell"
     },
     {
@@ -210,7 +326,7 @@
     {
       "celltype": "float",
       "checksum": {
-        "value": "a162c88bc74487aa49b7d96aa17dc97d9deea073bd7a1d31f56a72ac6d9a8b72"
+        "value": "eccf14463471b4105c12aa6105820e7ea1557f6c49b5d9aa7dde97c5df4d9ad6"
       },
       "datatype": "mixed",
       "file_extension": "text",
@@ -228,7 +344,7 @@
     {
       "celltype": "binary",
       "checksum": {
-        "value": "1d85517b6007d3319c2896208c8a546c34bdc258fe257e9c8974b731fe6be742"
+        "value": "84fd356ce4f7bbc0962f82eb9522bdf2eb195d110b4123184cd06701f86650e7"
       },
       "datatype": "mixed",
       "mimetype": "application/octet-stream",
@@ -251,7 +367,7 @@
     {
       "celltype": "text",
       "checksum": {
-        "value": "086419195fa886de2a3a4e809622438ab105d4bb17e71672b4a3d33a9da85fc2"
+        "value": "133c021c67880a7c55febc07b8061c9f9e0ffbe4e9d283e30b77a933933a2abd"
       },
       "datatype": "mixed",
       "file_extension": "js",
@@ -291,7 +407,7 @@
     {
       "celltype": "text",
       "checksum": {
-        "value": "9756e8d7a3590253cf128372c14a68ca03391973aa45c134b20c52d95d525c6c"
+        "value": "b795c3249743eaeee7eadc71799ee02abd928ad5bd27ebe687ab81a024e12c6e"
       },
       "file_extension": "js",
       "mimetype": "application/javascript",
