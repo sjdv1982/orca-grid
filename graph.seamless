@@ -104,8 +104,8 @@
     {
       "celltype": "structured",
       "checksum": {
-        "buffer": "1cd4b3e3ea3a9f95609f7d814d8eed82770d47741a808802ac9963058b7c7781",
-        "value": "1cd4b3e3ea3a9f95609f7d814d8eed82770d47741a808802ac9963058b7c7781"
+        "buffer": "0486ded0166459f665112f43c804cd20bb3c1880a09b391cbd42b2f98a0fc484",
+        "value": "0486ded0166459f665112f43c804cd20bb3c1880a09b391cbd42b2f98a0fc484"
       },
       "datatype": "mixed",
       "hash_pattern": null,
@@ -132,11 +132,11 @@
       "RESULT": "result",
       "SCHEMA": null,
       "checksum": {
-        "code": "8b5ef2d2caf3be5ae634bebc8ba064fcc42d23d68013eeab5155c9c7f05df3d1",
-        "input": "f8541a2ecdc210de660a27e78cf59576bef3ee7e5924b361738dd434e8703b0d",
-        "input_auth": "9b362d00f68ae6ede2a6148a90cd48eb4c733ab61249e70abd881c72ce71e42e",
-        "input_buffer": "f8541a2ecdc210de660a27e78cf59576bef3ee7e5924b361738dd434e8703b0d",
-        "result": "1cd4b3e3ea3a9f95609f7d814d8eed82770d47741a808802ac9963058b7c7781"
+        "code": "9a875d43a41fff3980228b56e4c66f0ca983792a413af714defd7bb1fa2767b7",
+        "input": "342f7f275fe14b8617280cb20e80f8ae6cc8e73186fd4e5a03499c32c27f3967",
+        "input_auth": "f64633d12e4a5d92c2fa254f2c92eeab8a1e86871201d5bac38a7a2122e55e1e",
+        "input_buffer": "342f7f275fe14b8617280cb20e80f8ae6cc8e73186fd4e5a03499c32c27f3967",
+        "result": "0486ded0166459f665112f43c804cd20bb3c1880a09b391cbd42b2f98a0fc484"
       },
       "compiled": false,
       "debug": false,
@@ -157,6 +157,9 @@
           "celltype": "float"
         },
         "coor": {
+          "celltype": "mixed"
+        },
+        "extrusion": {
           "celltype": "mixed"
         },
         "voxelsize": {
@@ -259,9 +262,9 @@
       "SCHEMA": null,
       "checksum": {
         "code": "804bff693dc0aebbe35f3ab8b7eb0cb10a7fb0b7b1c572fea959d1cea7d34199",
-        "input": "ccfee34fabb655695c3dbb15044601c4aeb63df773aaaa9c0503691cb6ee352d",
-        "input_buffer": "ccfee34fabb655695c3dbb15044601c4aeb63df773aaaa9c0503691cb6ee352d",
-        "result": "f98a550de0f650f48b8f47c9fe5d044403a322685bdd0825940977763ecb7c0a"
+        "input": "40816c6592439d380fbcb67ffcd0c41d0bbb0f6265160b67c3d8c0e5bf5381f3",
+        "input_buffer": "40816c6592439d380fbcb67ffcd0c41d0bbb0f6265160b67c3d8c0e5bf5381f3",
+        "result": "54f7a10f887588ad861e051c80be142488e2095bdae1c427f52cf4ca2af2dffe"
       },
       "compiled": false,
       "debug": false,
@@ -330,7 +333,7 @@
     {
       "celltype": "float",
       "checksum": {
-        "value": "eccf14463471b4105c12aa6105820e7ea1557f6c49b5d9aa7dde97c5df4d9ad6"
+        "value": "497dc21c2212cf7ca89aebc81d68ddc00d407f43347c3e9ed1fc57987fc0f0ca"
       },
       "datatype": "mixed",
       "file_extension": "text",
@@ -348,7 +351,7 @@
     {
       "celltype": "binary",
       "checksum": {
-        "value": "23703c5f7f064cd0a5415c7f361697ebb249c0e85bd9766fd41755423ca51306"
+        "value": "f475c13dca79e575bbb178dc46703f12c3046f56325eebf4d40501857b7c688f"
       },
       "datatype": "mixed",
       "mimetype": "application/octet-stream",
