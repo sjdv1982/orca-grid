@@ -1,4 +1,5 @@
 {
+  "__seamless__": "0.8",
   "connections": [
     {
       "source": [
@@ -99,13 +100,13 @@
       "type": "connection"
     }
   ],
-  "lib": {},
+  "lib": [],
   "nodes": [
     {
       "celltype": "structured",
       "checksum": {
-        "buffer": "0486ded0166459f665112f43c804cd20bb3c1880a09b391cbd42b2f98a0fc484",
-        "value": "0486ded0166459f665112f43c804cd20bb3c1880a09b391cbd42b2f98a0fc484"
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "value": "c72bcd70e8ec5f7f7188595d1816e7aa01ea9cff40810c39f8c391371cd7d0e9"
       },
       "datatype": "mixed",
       "hash_pattern": null,
@@ -117,7 +118,7 @@
     {
       "celltype": "structured",
       "checksum": {
-        "buffer": "86fe53887a974e99cf66cf89b7db51b9085c2e110394fca059f83d2453a284d1",
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
         "value": "86fe53887a974e99cf66cf89b7db51b9085c2e110394fca059f83d2453a284d1"
       },
       "datatype": "mixed",
@@ -133,10 +134,12 @@
       "SCHEMA": null,
       "checksum": {
         "code": "9a875d43a41fff3980228b56e4c66f0ca983792a413af714defd7bb1fa2767b7",
-        "input": "342f7f275fe14b8617280cb20e80f8ae6cc8e73186fd4e5a03499c32c27f3967",
-        "input_auth": "f64633d12e4a5d92c2fa254f2c92eeab8a1e86871201d5bac38a7a2122e55e1e",
-        "input_buffer": "342f7f275fe14b8617280cb20e80f8ae6cc8e73186fd4e5a03499c32c27f3967",
-        "result": "0486ded0166459f665112f43c804cd20bb3c1880a09b391cbd42b2f98a0fc484"
+        "input": "6fa44fb1d0d99af7cbc1cac8d3b85b635beb007060419a3c3d8904199e8e1aba",
+        "input_auth": "acb1f8f9865aa0a009826030bcf3cfe49352169b0e06c9e2580942f7f529bfb7",
+        "input_buffer": "6fa44fb1d0d99af7cbc1cac8d3b85b635beb007060419a3c3d8904199e8e1aba",
+        "result": "c72bcd70e8ec5f7f7188595d1816e7aa01ea9cff40810c39f8c391371cd7d0e9",
+        "result_schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c"
       },
       "compiled": false,
       "debug": false,
@@ -172,7 +175,7 @@
     {
       "celltype": "code",
       "checksum": {
-        "value": "804bff693dc0aebbe35f3ab8b7eb0cb10a7fb0b7b1c572fea959d1cea7d34199"
+        "value": "246a2f65c1722a6f9498b0eba45933e303f995fb5b6e2992d61248cd2ad575eb"
       },
       "datatype": "mixed",
       "file_extension": "py",
@@ -240,7 +243,9 @@
         "code": "fbd6d0426324b8a0c3a490386fa5c661b71ed3350e5ea569824aae2bc28000f9",
         "input": "abcaae825d41ea1b2afbb5ec03043f7c822bd4fdc8270e956e1ac55a9d01f174",
         "input_buffer": "abcaae825d41ea1b2afbb5ec03043f7c822bd4fdc8270e956e1ac55a9d01f174",
-        "result": "86fe53887a974e99cf66cf89b7db51b9085c2e110394fca059f83d2453a284d1"
+        "result": "86fe53887a974e99cf66cf89b7db51b9085c2e110394fca059f83d2453a284d1",
+        "result_schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c"
       },
       "compiled": false,
       "debug": false,
@@ -261,10 +266,12 @@
       "RESULT": "result",
       "SCHEMA": null,
       "checksum": {
-        "code": "804bff693dc0aebbe35f3ab8b7eb0cb10a7fb0b7b1c572fea959d1cea7d34199",
-        "input": "40816c6592439d380fbcb67ffcd0c41d0bbb0f6265160b67c3d8c0e5bf5381f3",
-        "input_buffer": "40816c6592439d380fbcb67ffcd0c41d0bbb0f6265160b67c3d8c0e5bf5381f3",
-        "result": "54f7a10f887588ad861e051c80be142488e2095bdae1c427f52cf4ca2af2dffe"
+        "code": "246a2f65c1722a6f9498b0eba45933e303f995fb5b6e2992d61248cd2ad575eb",
+        "input": "d6591dad34a38069719500d35b5e5024aa88b5b710c360edbc89ae5a36568106",
+        "input_buffer": "d6591dad34a38069719500d35b5e5024aa88b5b710c360edbc89ae5a36568106",
+        "result": "53d9ef999481ae25ce9841033229fc956a57686d25f2a12a89bfb651103616ac",
+        "result_schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c",
+        "schema": "d0a1b2af1705c1b8495b00145082ef7470384e62ac1c4d9b9cdbbe0476c28f8c"
       },
       "compiled": false,
       "debug": false,
@@ -286,7 +293,7 @@
     {
       "celltype": "float",
       "checksum": {
-        "value": "fbeecb3723faac6d3cc36ad442210c8911ff4b3757547862455018a4211b291b"
+        "value": "6f1e21084c21cb95ea6d17d3f5d2aff5d92965b6c8702b49e28990894bc7859c"
       },
       "datatype": "mixed",
       "file_extension": "text",
@@ -333,7 +340,7 @@
     {
       "celltype": "float",
       "checksum": {
-        "value": "497dc21c2212cf7ca89aebc81d68ddc00d407f43347c3e9ed1fc57987fc0f0ca"
+        "value": "fbeecb3723faac6d3cc36ad442210c8911ff4b3757547862455018a4211b291b"
       },
       "datatype": "mixed",
       "file_extension": "text",
@@ -349,9 +356,9 @@
       "type": "cell"
     },
     {
-      "celltype": "binary",
+      "celltype": "bytes",
       "checksum": {
-        "value": "f475c13dca79e575bbb178dc46703f12c3046f56325eebf4d40501857b7c688f"
+        "value": "34384703d10157055ac19814dfb3e7cfe79801969335f3c6f45b9faa1dff79a2"
       },
       "datatype": "mixed",
       "mimetype": "application/octet-stream",
@@ -435,5 +442,7 @@
       "type": "cell"
     }
   ],
-  "params": {}
+  "params": {
+    "share_namespace": "ctx"
+  }
 }

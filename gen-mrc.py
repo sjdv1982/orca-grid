@@ -30,7 +30,7 @@ class MemoryMrcFile(MrcFile):
             self._iostream.close()
             raise    
 
-arr = arr.unsilk.astype(np.float32)
+arr = arr.astype(np.float32)
 mrc_buffer = MyBytesIO()
 mrc_file = MemoryMrcFile(mrc_buffer, mode="w+")
 data = arr.swapaxes(0,2)
